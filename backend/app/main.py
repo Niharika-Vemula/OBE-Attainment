@@ -27,6 +27,7 @@ app.add_middleware(
         "http://127.0.0.1:5173",
         "https://obe-attainment.vercel.app",
         "https://obe-attainment.onrender.com",
+        "https://obe-attainment-git-main-niharika-vemulas-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
