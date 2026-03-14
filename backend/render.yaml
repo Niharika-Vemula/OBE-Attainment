@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: obe-attainment-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    rootDir: backend
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: obe_db
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CO_ATTAINMENT_THRESHOLD_L1
+        value: "50"
+      - key: CO_ATTAINMENT_THRESHOLD_L2
+        value: "60"
+      - key: CO_ATTAINMENT_THRESHOLD_L3
+        value: "70"
