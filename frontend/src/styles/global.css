@@ -1,56 +1,27 @@
-/* Sidebar */
-.sidebar {
-  width: 256px;
-  min-height: 100vh;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-right: 1px solid rgba(139, 92, 246, 0.1);
-  display: flex;
-  flex-direction: column;
-  box-shadow: 2px 0 16px rgba(139, 92, 246, 0.06);
+﻿/* Sidebar — purple gradient with white text */
+aside.sidebar {
+  width: 220px !important;
+  min-height: 100vh !important;
+  background: linear-gradient(180deg, #5B21B6 0%, #6D28D9 40%, #7C3AED 100%) !important;
+  border-right: none !important;
+  box-shadow: 4px 0 20px rgba(109,40,217,0.25) !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
-.sidebar-logo {
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
-  display: flex; align-items: center; gap: 0.75rem;
-}
-.sidebar-logo-icon {
-  width: 40px; height: 40px; border-radius: 10px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff;
-}
-.sidebar-logo-title { font-weight: 700; font-size: 0.875rem; color: #3730a3; }
-.sidebar-logo-sub   { font-size: 0.7rem; color: #a78bfa; margin-top: 1px; }
-
-.sidebar-nav {
-  flex: 1; padding: 1rem 0.75rem;
-  display: flex; flex-direction: column; gap: 2px;
-}
-.sidebar-link {
-  display: flex; align-items: center; gap: 0.75rem;
-  padding: 0.625rem 0.75rem; border-radius: 8px;
-  font-size: 0.875rem; font-weight: 500;
-  color: #6d6a9c;
-  transition: all 0.2s ease;
-}
-.sidebar-link:hover {
-  background: rgba(139, 92, 246, 0.08);
-  color: #4f46e5;
-}
-.sidebar-link.active {
-  background: rgba(99, 102, 241, 0.12);
-  color: #4338ca;
-  font-weight: 600;
-}
-.sidebar-divider { height: 1px; background: rgba(139,92,246,0.1); margin: 0.5rem 0.75rem; }
-.sidebar-footer {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.1);
-  display: flex; align-items: center; justify-content: space-between;
-}
-.sidebar-user-name { font-size: 0.8rem; font-weight: 600; color: #3730a3; }
-.sidebar-user-role { font-size: 0.7rem; color: #a78bfa; text-transform: capitalize; }
-.sidebar-logout { padding: 0.375rem; border-radius: 6px; color: #a78bfa; }
-.sidebar-logout:hover { background: rgba(139,92,246,0.1); color: #6366f1; }
+.sidebar-logo { padding: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; gap: 0.625rem; }
+.sidebar-logo-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: #fff !important; }
+.sidebar-logo-title { font-weight: 700; font-size: 0.875rem; color: #ffffff !important; }
+.sidebar-logo-sub { font-size: 0.68rem; color: rgba(255,255,255,0.8) !important; margin-top: 1px; }
+.sidebar-nav { flex: 1; padding: 0.875rem 0.75rem; display: flex; flex-direction: column; gap: 2px; }
+.sidebar-link { display: flex; align-items: center; gap: 0.625rem; padding: 0.55rem 0.875rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.85) !important; transition: all 0.2s ease; }
+.sidebar-link svg { color: rgba(255,255,255,0.85) !important; }
+.sidebar-link:hover { background: rgba(255,255,255,0.12) !important; color: #ffffff !important; }
+.sidebar-link:hover svg { color: #ffffff !important; }
+.sidebar-link.active { background: rgba(255,255,255,0.2) !important; color: #ffffff !important; font-weight: 600; }
+.sidebar-link.active svg { color: #ffffff !important; }
+.sidebar-divider { height: 1px; background: rgba(255,255,255,0.15); margin: 0.5rem 0.75rem; }
+.sidebar-footer { padding: 1rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: space-between; }
+.sidebar-user-name { font-size: 0.8rem; font-weight: 600; color: #ffffff !important; }
+.sidebar-user-role { font-size: 0.68rem; color: rgba(255,255,255,0.7) !important; text-transform: capitalize; }
+.sidebar-logout { padding: 0.375rem; border-radius: 6px; color: rgba(255,255,255,0.7) !important; }
+.sidebar-logout:hover { background: rgba(255,255,255,0.15) !important; color: #ffffff !important; }
