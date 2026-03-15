@@ -14,31 +14,10 @@ a { text-decoration: none; color: inherit; }
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { border-radius: 9999px; }
+::-webkit-scrollbar-thumb { border-radius: 9999px; background: #CBD5E1; }
 
 /* ── Transitions ── */
-button, a, input, select, textarea {
-  transition: all 0.2s ease;
-}
-
-/* ── Shared layout ── */
-.app-shell {
-  display: flex;
-  min-height: 100vh;
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-.app-main {
-  flex: 1;
-  overflow-y: auto;
-  padding: 2rem;
-  min-width: 0;
-}
-
-/* ── Shared table base ── */
-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-th { text-align: left; font-weight: 600; padding: 0.625rem 1rem; }
-td { padding: 0.625rem 1rem; }
+button, a, input, select, textarea { transition: all 0.2s ease; }
 
 /* ── Shared form base ── */
 input, select, textarea {

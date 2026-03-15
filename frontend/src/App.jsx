@@ -20,11 +20,7 @@ function AppLayout() {
   if (!user) return <Navigate to="/login" replace />
   const theme = user.role === 'admin' ? 'admin-theme' : 'faculty-theme'
   return (
-    <div className={`flex min-h-screen ${theme}`} style={
-      user.role === 'admin'
-        ? { background: '#0F0E1A' }
-        : { background: 'linear-gradient(135deg, #EFF6FF 0%, #F0F9FF 50%, #F5F3FF 100%)' }
-    }>
+    <div className={`flex min-h-screen ${theme}`}>
       <Sidebar />
       <main className="flex-1 p-8 overflow-y-auto">
         <Routes>

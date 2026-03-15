@@ -2,40 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 @import './styles/global.css';
 @import './styles/faculty-theme.css';
 @import './styles/admin-theme.css';
 
-/* ── Legacy compatibility — keeps existing Tailwind pages working ── */
+/* ── Base ── */
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
   min-height: 100vh;
 }
 
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { border-radius: 9999px; }
-
+/* ── Shared glass-card (login / landing pages, outside theme) ── */
 .glass-card {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 24px rgba(139, 92, 246, 0.08), 0 1px 4px rgba(139, 92, 246, 0.06);
-  transition: all 0.2s ease;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(124, 111, 247, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .glass-card:hover {
-  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.14), 0 2px 8px rgba(139, 92, 246, 0.08);
+  box-shadow: 0 8px 28px rgba(124, 111, 247, 0.13);
 }
 
+/* ── Shared gradient-btn (login page) ── */
 .gradient-btn {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #7C6FF7, #A5B4FC);
   color: white;
+  border-radius: 10px;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 .gradient-btn:hover {
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+  background: linear-gradient(135deg, #6558E8, #818CF8);
+  box-shadow: 0 4px 14px rgba(124, 111, 247, 0.35);
 }
 .gradient-btn:disabled { opacity: 0.5; cursor: not-allowed; }

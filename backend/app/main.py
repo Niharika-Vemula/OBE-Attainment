@@ -1,7 +1,7 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, PlainTextResponse
 from app.database import init_db, close_db
 from app.routers import course, exam, marks, attainment, report, chatbot, admin
 
@@ -49,8 +49,9 @@ def root():
 
 
 @app.get("/health")
+@app.head("/health")
 def health():
-    return {"status": "ok"}
+    return PlainTextResponse("OK", status_code=200)
 
 
 @app.exception_handler(Exception)
