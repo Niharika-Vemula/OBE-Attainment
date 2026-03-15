@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import './styles/global.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-@import './styles/global.css';
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -36,3 +36,10 @@ body {
   box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
 }
 .gradient-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Force sidebar purple — overrides Tailwind */
+aside.sidebar {
+  background: linear-gradient(180deg, #5B21B6 0%, #6D28D9 40%, #7C3AED 100%) !important;
+  border-right: none !important;
+  box-shadow: 4px 0 20px rgba(109,40,217,0.25) !important;
+}
