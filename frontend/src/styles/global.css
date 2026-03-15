@@ -1,39 +1,56 @@
-/* ============================================================
-   GLOBAL.CSS — Base resets, fonts, scrollbar, shared utilities
-   ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-
-/* ── Reset ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; -webkit-font-smoothing: antialiased; }
-img, svg { display: block; }
-button { cursor: pointer; border: none; background: none; }
-a { text-decoration: none; color: inherit; }
-
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { border-radius: 9999px; background: #CBD5E1; }
-
-/* ── Transitions ── */
-button, a, input, select, textarea { transition: all 0.2s ease; }
-
-/* ── Shared form base ── */
-input, select, textarea {
-  width: 100%;
-  font-family: inherit;
-  font-size: 0.875rem;
-  outline: none;
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
+/* Sidebar */
+.sidebar {
+  width: 256px;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(139, 92, 246, 0.1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 16px rgba(139, 92, 246, 0.06);
 }
-
-/* ── Spinner ── */
-@keyframes spin { to { transform: rotate(360deg); } }
-.spinner {
-  width: 1.5rem; height: 1.5rem;
-  border-width: 2px; border-style: solid;
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
+.sidebar-logo {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  display: flex; align-items: center; gap: 0.75rem;
 }
+.sidebar-logo-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+}
+.sidebar-logo-title { font-weight: 700; font-size: 0.875rem; color: #3730a3; }
+.sidebar-logo-sub   { font-size: 0.7rem; color: #a78bfa; margin-top: 1px; }
+
+.sidebar-nav {
+  flex: 1; padding: 1rem 0.75rem;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.sidebar-link {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.625rem 0.75rem; border-radius: 8px;
+  font-size: 0.875rem; font-weight: 500;
+  color: #6d6a9c;
+  transition: all 0.2s ease;
+}
+.sidebar-link:hover {
+  background: rgba(139, 92, 246, 0.08);
+  color: #4f46e5;
+}
+.sidebar-link.active {
+  background: rgba(99, 102, 241, 0.12);
+  color: #4338ca;
+  font-weight: 600;
+}
+.sidebar-divider { height: 1px; background: rgba(139,92,246,0.1); margin: 0.5rem 0.75rem; }
+.sidebar-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.1);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.sidebar-user-name { font-size: 0.8rem; font-weight: 600; color: #3730a3; }
+.sidebar-user-role { font-size: 0.7rem; color: #a78bfa; text-transform: capitalize; }
+.sidebar-logout { padding: 0.375rem; border-radius: 6px; color: #a78bfa; }
+.sidebar-logout:hover { background: rgba(139,92,246,0.1); color: #6366f1; }
