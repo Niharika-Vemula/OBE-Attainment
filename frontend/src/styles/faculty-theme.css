@@ -1,0 +1,189 @@
+/* ============================================================
+   FACULTY-THEME.CSS — Clean blue/white academic SaaS theme
+   ============================================================ */
+
+.faculty-theme {
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --primary-light: #EFF6FF;
+  --accent: #06B6D4;
+  --accent-light: #ECFEFF;
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --border: #E2E8F0;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --danger: #EF4444;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --sidebar-bg: #FFFFFF;
+  --sidebar-text: #475569;
+  --sidebar-active-bg: #EFF6FF;
+  --sidebar-active-text: #2563EB;
+  --sidebar-active-border: #2563EB;
+  --sidebar-hover-bg: #F8FAFC;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --radius-sm: 8px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Layout ── */
+.faculty-theme .app-shell { background: var(--bg); }
+.faculty-theme .app-main { background: var(--bg); }
+.faculty-theme ::-webkit-scrollbar-thumb { background: #CBD5E1; }
+
+/* ── Sidebar ── */
+.faculty-theme .sidebar {
+  width: 256px; min-height: 100vh;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+.faculty-theme .sidebar-logo {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.faculty-theme .sidebar-logo-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--primary-light);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary);
+}
+.faculty-theme .sidebar-logo-title { font-weight: 700; font-size: 0.875rem; color: var(--text-primary); }
+.faculty-theme .sidebar-logo-sub { font-size: 0.7rem; color: var(--text-muted); margin-top: 1px; }
+.faculty-theme .sidebar-nav { flex: 1; padding: 1rem 0.75rem; display: flex; flex-direction: column; gap: 2px; }
+.faculty-theme .sidebar-link {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.625rem 0.75rem; border-radius: var(--radius-sm);
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--sidebar-text);
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+.faculty-theme .sidebar-link:hover {
+  background: var(--sidebar-hover-bg);
+  color: var(--primary);
+}
+.faculty-theme .sidebar-link.active {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-active-text);
+  border-left-color: var(--sidebar-active-border);
+  font-weight: 600;
+}
+.faculty-theme .sidebar-divider { height: 1px; background: var(--border); margin: 0.5rem 0.75rem; }
+.faculty-theme .sidebar-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.faculty-theme .sidebar-user-name { font-size: 0.8rem; font-weight: 600; color: var(--text-primary); }
+.faculty-theme .sidebar-user-role { font-size: 0.7rem; color: var(--text-muted); text-transform: capitalize; }
+.faculty-theme .sidebar-logout {
+  padding: 0.375rem; border-radius: 6px;
+  color: var(--text-muted);
+}
+.faculty-theme .sidebar-logout:hover { background: var(--primary-light); color: var(--primary); }
+
+/* ── Page Header ── */
+.faculty-theme .page-header { margin-bottom: 1.5rem; }
+.faculty-theme .page-title { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+.faculty-theme .page-subtitle { font-size: 0.875rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+/* ── Cards ── */
+.faculty-theme .card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.faculty-theme .card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.faculty-theme .stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+.faculty-theme .stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.faculty-theme .stat-label { font-size: 0.75rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.faculty-theme .stat-value { font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-top: 0.25rem; }
+.faculty-theme .stat-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: var(--primary-light);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary);
+}
+
+/* ── Buttons ── */
+.faculty-theme .btn-primary {
+  background: var(--primary); color: #fff;
+  padding: 0.5rem 1rem; border-radius: var(--radius-sm);
+  font-size: 0.875rem; font-weight: 500;
+  box-shadow: 0 1px 3px rgba(37,99,235,0.3);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.faculty-theme .btn-primary:hover { background: var(--primary-hover); box-shadow: 0 4px 12px rgba(37,99,235,0.35); }
+.faculty-theme .btn-secondary {
+  background: var(--surface); color: var(--text-secondary);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem; border-radius: var(--radius-sm);
+  font-size: 0.875rem; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.faculty-theme .btn-secondary:hover { background: var(--bg); border-color: var(--primary); color: var(--primary); }
+.faculty-theme .btn-danger {
+  background: #FEF2F2; color: var(--danger);
+  border: 1px solid #FECACA;
+  padding: 0.5rem 1rem; border-radius: var(--radius-sm);
+  font-size: 0.875rem; font-weight: 500;
+}
+.faculty-theme .btn-danger:hover { background: var(--danger); color: #fff; }
+.faculty-theme button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Forms ── */
+.faculty-theme input, .faculty-theme select, .faculty-theme textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+.faculty-theme input:focus, .faculty-theme select:focus, .faculty-theme textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+.faculty-theme input::placeholder, .faculty-theme textarea::placeholder { color: var(--text-muted); }
+.faculty-theme label { font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); display: block; margin-bottom: 0.375rem; }
+
+/* ── Tables ── */
+.faculty-theme table { background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+.faculty-theme th { background: var(--bg); color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); }
+.faculty-theme td { border-bottom: 1px solid var(--border); color: var(--text-primary); }
+.faculty-theme tr:last-child td { border-bottom: none; }
+.faculty-theme tr:hover td { background: var(--primary-light); }
+
+/* ── Badges ── */
+.faculty-theme .badge {
+  display: inline-flex; align-items: center;
+  padding: 0.2rem 0.6rem; border-radius: 9999px;
+  font-size: 0.7rem; font-weight: 600;
+}
+.faculty-theme .badge-blue { background: #DBEAFE; color: #1D4ED8; }
+.faculty-theme .badge-cyan { background: #CFFAFE; color: #0E7490; }
+.faculty-theme .badge-green { background: #DCFCE7; color: #15803D; }
+.faculty-theme .badge-purple { background: #F3E8FF; color: #7E22CE; }
+.faculty-theme .badge-orange { background: #FEF3C7; color: #B45309; }
+.faculty-theme .badge-slate { background: #F1F5F9; color: #475569; }
+
+/* ── Backend status dot ── */
+.faculty-theme .status-dot-ok { background: var(--success); }
+.faculty-theme .status-dot-err { background: var(--danger); }
