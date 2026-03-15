@@ -19,7 +19,7 @@ function AppLayout() {
   const { user } = useAuth()
   if (!user) return <Navigate to="/login" replace />
   return (
-    <div className="flex min-h-screen" style={{ background: 'linear-gradient(135deg, #ede9fe 0%, #e0e7ff 50%, #fce7f3 100%)' }}>
+    <div className="flex min-h-screen" style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 60%, #FAF5FF 100%)' }}>
       <Sidebar />
       <main className="flex-1 p-8 overflow-y-auto">
         <Routes>
