@@ -18,8 +18,9 @@ import AdminPanel from './pages/AdminPanel'
 function AppLayout() {
   const { user } = useAuth()
   if (!user) return <Navigate to="/login" replace />
+  const theme = user.role === 'admin' ? 'admin-theme' : 'faculty-theme'
   return (
-    <div className="flex min-h-screen" style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 60%, #FAF5FF 100%)' }}>
+    <div className={`flex min-h-screen ${theme}`}>
       <Sidebar />
       <main className="flex-1 p-8 overflow-y-auto">
         <Routes>
